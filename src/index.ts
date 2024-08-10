@@ -14,7 +14,7 @@ app.use(express.json());
 
 // Use CORS middleware to allow requests from specific origins
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000'], // Add all allowed origins here
+  origin: ['*'], // Add all allowed origins here
 }));
 
 // Configure Nodemailer transport
