@@ -50,8 +50,8 @@ app.post('/send-email', async (req, res) => {
 });
 
 // Load SSL certificate and key
-const key = fs.readFileSync(path.join(__dirname, 'server.key'), 'utf8');
-const cert = fs.readFileSync(path.join(__dirname, 'server.cert'), 'utf8');
+const key = fs.readFileSync('/home/ubuntu/api-pelis/ssl-certs/server.key', 'utf8');
+const cert = fs.readFileSync('/home/ubuntu/api-pelis/ssl-certs/server.cert', 'utf8');
 
 // Create HTTPS server
 const server = https.createServer({ key, cert }, app);
